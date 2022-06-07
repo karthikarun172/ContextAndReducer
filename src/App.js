@@ -5,11 +5,13 @@ import Home from "./Pages/Home";
 import Dashboard from "./Pages/Dashboard";
 import Setting from "./Pages/Setting";
 import { UserContext } from "./Context/UserContext";
+import { useState } from "react";
 
 function App() {
+  const [data, setData] = useState(5);
   return (
     <div className="App">
-      <UserContext.Provider value="hello from app js">
+      <UserContext.Provider value={{ data, setData }}>
         <Routes>
           <Route element={<Dashboard />} path="/dashboard"></Route>
           <Route element={<Setting />} path="/setting"></Route>
