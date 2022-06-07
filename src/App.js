@@ -6,9 +6,10 @@ import Dashboard from "./Pages/Dashboard";
 import Setting from "./Pages/Setting";
 import { UserContext } from "./Context/UserContext";
 import { useState } from "react";
+import { Swiggy } from "./Utils/DummyDatas";
 
 function App() {
-  const [data, setData] = useState(5);
+  const [data, setData] = useState(Swiggy);
   return (
     <div className="App">
       <UserContext.Provider value={{ data, setData }}>
