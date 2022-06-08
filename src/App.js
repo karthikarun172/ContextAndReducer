@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { Swiggy } from "./Utils/DummyDatas";
 import axios from "axios";
 import Cart from "./Pages/Cart";
+import ReducerHook from "./Pages/ReducerHook";
 
 function App() {
   const [data, setData] = useState([]);
@@ -30,6 +31,7 @@ function App() {
           <Route element={<Dashboard />} path="/dashboard"></Route>
           <Route element={<Setting />} path="/setting"></Route>
           <Route element={<Cart />} path="/cart"></Route>
+          <Route element={<ReducerHook />} path="/reducer"></Route>
           <Route element={<Home />} path="/"></Route>
         </Routes>
       </UserContext.Provider>
