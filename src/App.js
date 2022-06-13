@@ -10,6 +10,7 @@ import { Swiggy } from "./Utils/DummyDatas";
 import axios from "axios";
 import Cart from "./Pages/Cart";
 import ReducerHook from "./Pages/ReducerHook";
+import ReducerTodo from "./Pages/ReducerTodo";
 
 function App() {
   const [data, setData] = useState([]);
@@ -32,6 +33,7 @@ function App() {
           <Route element={<Setting />} path="/setting"></Route>
           <Route element={<Cart />} path="/cart"></Route>
           <Route element={<ReducerHook />} path="/reducer"></Route>
+          <Route element={<ReducerTodo />} path="/todoReducer"></Route>
           <Route element={<Home />} path="/"></Route>
         </Routes>
       </UserContext.Provider>
